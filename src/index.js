@@ -33,9 +33,20 @@ function switchTheme() {
 }
 
 function restartTheme() {
-  if (localStorage.getItem('theme') === Theme.DARK) {
+  if(localStorage.getItem('theme') === Theme.DARK) {
     changeTheme.classList.add(Theme.DARK);
     buttonTheme.checked = true;
+  } else {
+    changeTheme.classList.add(Theme.LIGHT);
+    buttonTheme.checked = false;
   }
 }
 restartTheme();
+
+// function restartTheme() {
+//   if (localStorage.getItem('theme') === Theme.DARK) {
+//     changeTheme.classList.add(Theme.DARK);
+//     buttonTheme.checked = true;
+//   }
+// }
+// restartTheme();
